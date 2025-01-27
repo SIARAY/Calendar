@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- its v31 version is more interesting -->
+    <style name="WidgetTheme" />
+
+    <!-- its v31 version is more interesting -->
+    <color name="widget_background">@android:color/transparent</color>
+
+    <!-- There is an override of this in values-night/styles.xml -->
+    <style name="BaseDayNightTheme" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="SplashScreenTheme" parent="BaseDayNightTheme">
+        <item name="android:windowSplashscreenContent" tools:targetApi="o">@drawable/splash_screen
+        </item>
+        <!--<item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">
+            @drawable/splash_icon_animation
+        </item>
+        <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="s">1000</item>-->
+    </style>
+
+    <style name="BaseTheme" parent="BaseDayNightTheme">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+    </style>
+
+    <!-- But in v31/styles.xml it is overridden to not have shadow -->
+    <style name="WidgetTextStyle">
+        <item name="android:paddingLeft">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+</resources>
